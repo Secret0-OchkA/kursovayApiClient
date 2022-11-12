@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The Employee model module.
- * @module model/Employee
+ * The EmployeeView model module.
+ * @module model/EmployeeView
  * @version v1
  */
-class Employee {
+class EmployeeView {
     /**
-     * Constructs a new <code>Employee</code>.
-     * @alias module:model/Employee
+     * Constructs a new <code>EmployeeView</code>.
+     * @alias module:model/EmployeeView
      */
     constructor() { 
         
-        Employee.initialize(this);
+        EmployeeView.initialize(this);
     }
 
     /**
@@ -37,24 +37,18 @@ class Employee {
     }
 
     /**
-     * Constructs a <code>Employee</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EmployeeView</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Employee} obj Optional instance to populate.
-     * @return {module:model/Employee} The populated <code>Employee</code> instance.
+     * @param {module:model/EmployeeView} obj Optional instance to populate.
+     * @return {module:model/EmployeeView} The populated <code>EmployeeView</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Employee();
+            obj = obj || new EmployeeView();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('createDate')) {
-                obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date');
-            }
-            if (data.hasOwnProperty('modifyDate')) {
-                obj['modifyDate'] = ApiClient.convertToType(data['modifyDate'], 'Date');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -64,9 +58,9 @@ class Employee {
     }
 
     /**
-     * Validates the JSON data with respect to <code>Employee</code>.
+     * Validates the JSON data with respect to <code>EmployeeView</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Employee</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EmployeeView</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -85,27 +79,17 @@ class Employee {
 /**
  * @member {Number} id
  */
-Employee.prototype['id'] = undefined;
-
-/**
- * @member {Date} createDate
- */
-Employee.prototype['createDate'] = undefined;
-
-/**
- * @member {Date} modifyDate
- */
-Employee.prototype['modifyDate'] = undefined;
+EmployeeView.prototype['id'] = undefined;
 
 /**
  * @member {String} name
  */
-Employee.prototype['name'] = undefined;
+EmployeeView.prototype['name'] = undefined;
 
 
 
 
 
 
-export default Employee;
+export default EmployeeView;
 

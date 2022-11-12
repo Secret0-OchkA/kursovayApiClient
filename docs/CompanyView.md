@@ -1,13 +1,10 @@
-# MyApiV1.Department
+# MyApiV1.CompanyView
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
-**createDate** | **Date** |  | [optional] 
-**modifyDate** | **Date** |  | [optional] 
 **name** | **String** |  | [optional] 
-**budget** | **Number** |  | [optional] 
 
 

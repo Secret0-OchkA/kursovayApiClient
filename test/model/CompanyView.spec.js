@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MyApiV1.Company();
+    instance = new MyApiV1.CompanyView();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,22 @@
       object[property] = value;
   }
 
-  describe('Company', function() {
-    it('should create an instance of Company', function() {
-      // uncomment below and update the code to test Company
-      //var instance = new MyApiV1.Company();
-      //expect(instance).to.be.a(MyApiV1.Company);
+  describe('CompanyView', function() {
+    it('should create an instance of CompanyView', function() {
+      // uncomment below and update the code to test CompanyView
+      //var instance = new MyApiV1.CompanyView();
+      //expect(instance).to.be.a(MyApiV1.CompanyView);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new MyApiV1.Company();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createDate (base name: "createDate")', function() {
-      // uncomment below and update the code to test the property createDate
-      //var instance = new MyApiV1.Company();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property modifyDate (base name: "modifyDate")', function() {
-      // uncomment below and update the code to test the property modifyDate
-      //var instance = new MyApiV1.Company();
+      //var instance = new MyApiV1.CompanyView();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new MyApiV1.Company();
+      //var instance = new MyApiV1.CompanyView();
       //expect(instance).to.be();
     });
 

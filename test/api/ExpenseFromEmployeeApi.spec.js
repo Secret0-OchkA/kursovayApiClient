@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('deleteExpense', function() {
+      it('should call deleteExpense successfully', function(done) {
+        //uncomment below and update the code to test deleteExpense
+        //instance.deleteExpense(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getExpense', function() {
       it('should call getExpense successfully', function(done) {
         //uncomment below and update the code to test getExpense

@@ -106,7 +106,7 @@ var api = new MyApiV1.BugetPlanApi()
 var companyId = 56; // {Number} 
 var departmnetId = 56; // {Number} 
 var opts = {
-  'bugetPlan': new MyApiV1.BugetPlan() // {BugetPlan} 
+  'bugetPlanView': new MyApiV1.BugetPlanView() // {BugetPlanView} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -152,6 +152,7 @@ Class | Method | HTTP request | Description
 *MyApiV1.ExpenseFromEmployeeApi* | [**changeAmmount**](docs/ExpenseFromEmployeeApi.md#changeAmmount) | **PUT** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/ChangeAmmount | Change ammout if not confirmed
 *MyApiV1.ExpenseFromEmployeeApi* | [**confirmExpense**](docs/ExpenseFromEmployeeApi.md#confirmExpense) | **PUT** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/Confirm | confirm expense if expense is valid
 *MyApiV1.ExpenseFromEmployeeApi* | [**createExpense**](docs/ExpenseFromEmployeeApi.md#createExpense) | **POST** /api/Employee/{employeeId}/ExpenseFromEmployee | create expense for employee
+*MyApiV1.ExpenseFromEmployeeApi* | [**deleteExpense**](docs/ExpenseFromEmployeeApi.md#deleteExpense) | **DELETE** /api/Employee/{employeeId}/ExpenseFromEmployee/{id} | Delete expense
 *MyApiV1.ExpenseFromEmployeeApi* | [**getExpense**](docs/ExpenseFromEmployeeApi.md#getExpense) | **GET** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId} | get expense in employee
 *MyApiV1.ExpenseFromEmployeeApi* | [**getExpenses**](docs/ExpenseFromEmployeeApi.md#getExpenses) | **GET** /api/Employee/{employeeId}/ExpenseFromEmployee | get expenses in emploee
 *MyApiV1.ExpenseFromEmployeeApi* | [**setExpenseType**](docs/ExpenseFromEmployeeApi.md#setExpenseType) | **PUT** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/SetType/{expenseTypeId} | change type if not confirmed
@@ -166,12 +167,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [MyApiV1.BugetPlan](docs/BugetPlan.md)
- - [MyApiV1.Company](docs/Company.md)
- - [MyApiV1.Department](docs/Department.md)
- - [MyApiV1.Employee](docs/Employee.md)
- - [MyApiV1.Expense](docs/Expense.md)
- - [MyApiV1.ExpenseType](docs/ExpenseType.md)
+ - [MyApiV1.BugetPlanView](docs/BugetPlanView.md)
+ - [MyApiV1.CompanyView](docs/CompanyView.md)
+ - [MyApiV1.DepartmentView](docs/DepartmentView.md)
+ - [MyApiV1.EmployeeView](docs/EmployeeView.md)
+ - [MyApiV1.ExpenseTypeView](docs/ExpenseTypeView.md)
+ - [MyApiV1.ExpenseView](docs/ExpenseView.md)
  - [MyApiV1.Month](docs/Month.md)
 
 

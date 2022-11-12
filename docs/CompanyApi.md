@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## changeName
 
-> Company changeName(id, name)
+> CompanyView changeName(id, name)
 
 change name company by id
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Company**](Company.md)
+[**CompanyView**](CompanyView.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ import MyApiV1 from 'my_api_v1';
 
 let apiInstance = new MyApiV1.CompanyApi();
 let opts = {
-  'company': new MyApiV1.Company() // Company | 
+  'companyView': new MyApiV1.CompanyView() // CompanyView | 
 };
 apiInstance.createCompany(opts, (error, data, response) => {
   if (error) {
@@ -86,7 +86,7 @@ apiInstance.createCompany(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company** | [**Company**](Company.md)|  | [optional] 
+ **companyView** | [**CompanyView**](CompanyView.md)|  | [optional] 
 
 ### Return type
 
@@ -147,7 +147,7 @@ No authorization required
 
 ## getCompany
 
-> Company getCompany(id)
+> CompanyView getCompany(id)
 
 get company by id
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Company**](Company.md)
+[**CompanyView**](CompanyView.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 
 ## getCompanyes
 
-> [Company] getCompanyes()
+> [CompanyView] getCompanyes()
 
 get all company
 
@@ -215,7 +215,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Company]**](Company.md)
+[**[CompanyView]**](CompanyView.md)
 
 ### Authorization
 

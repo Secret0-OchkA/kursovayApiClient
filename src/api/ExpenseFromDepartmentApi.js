@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Expense from '../model/Expense';
+import ExpenseView from '../model/ExpenseView';
 
 /**
 * ExpenseFromDepartment service.
@@ -38,7 +38,7 @@ export default class ExpenseFromDepartmentApi {
      * Callback function to receive the result of the getExpenseInDeparment operation.
      * @callback module:api/ExpenseFromDepartmentApi~getExpenseInDeparmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Expense} data The data returned by the service call.
+     * @param {module:model/ExpenseView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -48,7 +48,7 @@ export default class ExpenseFromDepartmentApi {
      * @param {Number} departmnetId 
      * @param {Number} expenseId 
      * @param {module:api/ExpenseFromDepartmentApi~getExpenseInDeparmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Expense}
+     * data is of type: {@link module:model/ExpenseView}
      */
     getExpenseInDeparment(companyId, departmnetId, expenseId, callback) {
       let postBody = null;
@@ -80,7 +80,7 @@ export default class ExpenseFromDepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Expense;
+      let returnType = ExpenseView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/ExpenseFromDepartment/{expenseId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -92,7 +92,7 @@ export default class ExpenseFromDepartmentApi {
      * Callback function to receive the result of the getExpesesInDepartment operation.
      * @callback module:api/ExpenseFromDepartmentApi~getExpesesInDepartmentCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Expense>} data The data returned by the service call.
+     * @param {Array.<module:model/ExpenseView>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -101,7 +101,7 @@ export default class ExpenseFromDepartmentApi {
      * @param {Number} companyId 
      * @param {Number} departmnetId 
      * @param {module:api/ExpenseFromDepartmentApi~getExpesesInDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Expense>}
+     * data is of type: {@link Array.<module:model/ExpenseView>}
      */
     getExpesesInDepartment(companyId, departmnetId, callback) {
       let postBody = null;
@@ -128,7 +128,7 @@ export default class ExpenseFromDepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Expense];
+      let returnType = [ExpenseView];
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/ExpenseFromDepartment', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

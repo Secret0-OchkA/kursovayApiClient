@@ -24,7 +24,7 @@ import MyApiV1 from 'my_api_v1';
 
 let apiInstance = new MyApiV1.EmployeeApi();
 let opts = {
-  'employee': new MyApiV1.Employee() // Employee | 
+  'employeeView': new MyApiV1.EmployeeView() // EmployeeView | 
 };
 apiInstance.createEmployee(opts, (error, data, response) => {
   if (error) {
@@ -40,7 +40,7 @@ apiInstance.createEmployee(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **employee** | [**Employee**](Employee.md)|  | [optional] 
+ **employeeView** | [**EmployeeView**](EmployeeView.md)|  | [optional] 
 
 ### Return type
 
@@ -101,7 +101,7 @@ No authorization required
 
 ## getEmployee
 
-> Employee getEmployee(id)
+> EmployeeView getEmployee(id)
 
 
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Employee**](Employee.md)
+[**EmployeeView**](EmployeeView.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ No authorization required
 
 ## getEmployees
 
-> [Employee] getEmployees()
+> [EmployeeView] getEmployees()
 
 
 
@@ -169,7 +169,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Employee]**](Employee.md)
+[**[EmployeeView]**](EmployeeView.md)
 
 ### Authorization
 

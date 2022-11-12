@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Expense from '../model/Expense';
+import ExpenseView from '../model/ExpenseView';
 
 /**
 * ExpenseFromEmployee service.
@@ -38,7 +38,7 @@ export default class ExpenseFromEmployeeApi {
      * Callback function to receive the result of the changeAmmount operation.
      * @callback module:api/ExpenseFromEmployeeApi~changeAmmountCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Expense} data The data returned by the service call.
+     * @param {module:model/ExpenseView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,7 +49,7 @@ export default class ExpenseFromEmployeeApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.amount 
      * @param {module:api/ExpenseFromEmployeeApi~changeAmmountCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Expense}
+     * data is of type: {@link module:model/ExpenseView}
      */
     changeAmmount(employeeId, expenseId, opts, callback) {
       opts = opts || {};
@@ -78,7 +78,7 @@ export default class ExpenseFromEmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Expense;
+      let returnType = ExpenseView;
       return this.apiClient.callApi(
         '/api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/ChangeAmmount', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -90,7 +90,7 @@ export default class ExpenseFromEmployeeApi {
      * Callback function to receive the result of the confirmExpense operation.
      * @callback module:api/ExpenseFromEmployeeApi~confirmExpenseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Expense} data The data returned by the service call.
+     * @param {module:model/ExpenseView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -99,7 +99,7 @@ export default class ExpenseFromEmployeeApi {
      * @param {Number} employeeId 
      * @param {Number} expenseId 
      * @param {module:api/ExpenseFromEmployeeApi~confirmExpenseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Expense}
+     * data is of type: {@link module:model/ExpenseView}
      */
     confirmExpense(employeeId, expenseId, callback) {
       let postBody = null;
@@ -126,7 +126,7 @@ export default class ExpenseFromEmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Expense;
+      let returnType = ExpenseView;
       return this.apiClient.callApi(
         '/api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/Confirm', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -146,12 +146,12 @@ export default class ExpenseFromEmployeeApi {
      * create expense for employee
      * @param {Number} employeeId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/Expense} opts.expense 
+     * @param {module:model/ExpenseView} opts.expenseView 
      * @param {module:api/ExpenseFromEmployeeApi~createExpenseCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createExpense(employeeId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['expense'];
+      let postBody = opts['expenseView'];
       // verify the required parameter 'employeeId' is set
       if (employeeId === undefined || employeeId === null) {
         throw new Error("Missing the required parameter 'employeeId' when calling createExpense");
@@ -179,10 +179,57 @@ export default class ExpenseFromEmployeeApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteExpense operation.
+     * @callback module:api/ExpenseFromEmployeeApi~deleteExpenseCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete expense
+     * @param {Number} id 
+     * @param {String} employeeId 
+     * @param {module:api/ExpenseFromEmployeeApi~deleteExpenseCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteExpense(id, employeeId, callback) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling deleteExpense");
+      }
+      // verify the required parameter 'employeeId' is set
+      if (employeeId === undefined || employeeId === null) {
+        throw new Error("Missing the required parameter 'employeeId' when calling deleteExpense");
+      }
+
+      let pathParams = {
+        'id': id,
+        'employeeId': employeeId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/Employee/{employeeId}/ExpenseFromEmployee/{id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getExpense operation.
      * @callback module:api/ExpenseFromEmployeeApi~getExpenseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Expense} data The data returned by the service call.
+     * @param {module:model/ExpenseView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -191,7 +238,7 @@ export default class ExpenseFromEmployeeApi {
      * @param {Number} employeeId 
      * @param {Number} expenseId 
      * @param {module:api/ExpenseFromEmployeeApi~getExpenseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Expense}
+     * data is of type: {@link module:model/ExpenseView}
      */
     getExpense(employeeId, expenseId, callback) {
       let postBody = null;
@@ -218,7 +265,7 @@ export default class ExpenseFromEmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Expense;
+      let returnType = ExpenseView;
       return this.apiClient.callApi(
         '/api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -230,7 +277,7 @@ export default class ExpenseFromEmployeeApi {
      * Callback function to receive the result of the getExpenses operation.
      * @callback module:api/ExpenseFromEmployeeApi~getExpensesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Expense>} data The data returned by the service call.
+     * @param {Array.<module:model/ExpenseView>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -238,7 +285,7 @@ export default class ExpenseFromEmployeeApi {
      * get expenses in emploee
      * @param {Number} employeeId 
      * @param {module:api/ExpenseFromEmployeeApi~getExpensesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Expense>}
+     * data is of type: {@link Array.<module:model/ExpenseView>}
      */
     getExpenses(employeeId, callback) {
       let postBody = null;
@@ -260,7 +307,7 @@ export default class ExpenseFromEmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Expense];
+      let returnType = [ExpenseView];
       return this.apiClient.callApi(
         '/api/Employee/{employeeId}/ExpenseFromEmployee', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -272,7 +319,7 @@ export default class ExpenseFromEmployeeApi {
      * Callback function to receive the result of the setExpenseType operation.
      * @callback module:api/ExpenseFromEmployeeApi~setExpenseTypeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Expense} data The data returned by the service call.
+     * @param {module:model/ExpenseView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -282,7 +329,7 @@ export default class ExpenseFromEmployeeApi {
      * @param {Number} expenseId 
      * @param {Number} expenseTypeId 
      * @param {module:api/ExpenseFromEmployeeApi~setExpenseTypeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Expense}
+     * data is of type: {@link module:model/ExpenseView}
      */
     setExpenseType(employeeId, expenseId, expenseTypeId, callback) {
       let postBody = null;
@@ -314,7 +361,7 @@ export default class ExpenseFromEmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Expense;
+      let returnType = ExpenseView;
       return this.apiClient.callApi(
         '/api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/SetType/{expenseTypeId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -326,7 +373,7 @@ export default class ExpenseFromEmployeeApi {
      * Callback function to receive the result of the validateEpxense operation.
      * @callback module:api/ExpenseFromEmployeeApi~validateEpxenseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Expense} data The data returned by the service call.
+     * @param {module:model/ExpenseView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -335,7 +382,7 @@ export default class ExpenseFromEmployeeApi {
      * @param {Number} employeeId 
      * @param {Number} expenseId 
      * @param {module:api/ExpenseFromEmployeeApi~validateEpxenseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Expense}
+     * data is of type: {@link module:model/ExpenseView}
      */
     validateEpxense(employeeId, expenseId, callback) {
       let postBody = null;
@@ -362,7 +409,7 @@ export default class ExpenseFromEmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Expense;
+      let returnType = ExpenseView;
       return this.apiClient.callApi(
         '/api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/Validate', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

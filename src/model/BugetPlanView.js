@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The BugetPlan model module.
- * @module model/BugetPlan
+ * The BugetPlanView model module.
+ * @module model/BugetPlanView
  * @version v1
  */
-class BugetPlan {
+class BugetPlanView {
     /**
-     * Constructs a new <code>BugetPlan</code>.
-     * @alias module:model/BugetPlan
+     * Constructs a new <code>BugetPlanView</code>.
+     * @alias module:model/BugetPlanView
      */
     constructor() { 
         
-        BugetPlan.initialize(this);
+        BugetPlanView.initialize(this);
     }
 
     /**
@@ -37,24 +37,18 @@ class BugetPlan {
     }
 
     /**
-     * Constructs a <code>BugetPlan</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>BugetPlanView</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/BugetPlan} obj Optional instance to populate.
-     * @return {module:model/BugetPlan} The populated <code>BugetPlan</code> instance.
+     * @param {module:model/BugetPlanView} obj Optional instance to populate.
+     * @return {module:model/BugetPlanView} The populated <code>BugetPlanView</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new BugetPlan();
+            obj = obj || new BugetPlanView();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('createDate')) {
-                obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date');
-            }
-            if (data.hasOwnProperty('modifyDate')) {
-                obj['modifyDate'] = ApiClient.convertToType(data['modifyDate'], 'Date');
             }
             if (data.hasOwnProperty('january')) {
                 obj['january'] = ApiClient.convertToType(data['january'], 'Number');
@@ -97,9 +91,9 @@ class BugetPlan {
     }
 
     /**
-     * Validates the JSON data with respect to <code>BugetPlan</code>.
+     * Validates the JSON data with respect to <code>BugetPlanView</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BugetPlan</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BugetPlanView</code>.
      */
     static validateJSON(data) {
 
@@ -114,82 +108,72 @@ class BugetPlan {
 /**
  * @member {Number} id
  */
-BugetPlan.prototype['id'] = undefined;
-
-/**
- * @member {Date} createDate
- */
-BugetPlan.prototype['createDate'] = undefined;
-
-/**
- * @member {Date} modifyDate
- */
-BugetPlan.prototype['modifyDate'] = undefined;
+BugetPlanView.prototype['id'] = undefined;
 
 /**
  * @member {Number} january
  */
-BugetPlan.prototype['january'] = undefined;
+BugetPlanView.prototype['january'] = undefined;
 
 /**
  * @member {Number} february
  */
-BugetPlan.prototype['february'] = undefined;
+BugetPlanView.prototype['february'] = undefined;
 
 /**
  * @member {Number} march
  */
-BugetPlan.prototype['march'] = undefined;
+BugetPlanView.prototype['march'] = undefined;
 
 /**
  * @member {Number} april
  */
-BugetPlan.prototype['april'] = undefined;
+BugetPlanView.prototype['april'] = undefined;
 
 /**
  * @member {Number} may
  */
-BugetPlan.prototype['may'] = undefined;
+BugetPlanView.prototype['may'] = undefined;
 
 /**
  * @member {Number} june
  */
-BugetPlan.prototype['june'] = undefined;
+BugetPlanView.prototype['june'] = undefined;
 
 /**
  * @member {Number} july
  */
-BugetPlan.prototype['july'] = undefined;
+BugetPlanView.prototype['july'] = undefined;
 
 /**
  * @member {Number} august
  */
-BugetPlan.prototype['august'] = undefined;
+BugetPlanView.prototype['august'] = undefined;
 
 /**
  * @member {Number} september
  */
-BugetPlan.prototype['september'] = undefined;
+BugetPlanView.prototype['september'] = undefined;
 
 /**
  * @member {Number} october
  */
-BugetPlan.prototype['october'] = undefined;
+BugetPlanView.prototype['october'] = undefined;
 
 /**
  * @member {Number} november
  */
-BugetPlan.prototype['november'] = undefined;
+BugetPlanView.prototype['november'] = undefined;
 
 /**
  * @member {Number} december
  */
-BugetPlan.prototype['december'] = undefined;
+BugetPlanView.prototype['december'] = undefined;
 
 
 
 
 
 
-export default BugetPlan;
+export default BugetPlanView;
 

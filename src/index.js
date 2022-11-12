@@ -13,12 +13,12 @@
 
 
 import ApiClient from './ApiClient';
-import BugetPlan from './model/BugetPlan';
-import Company from './model/Company';
-import Department from './model/Department';
-import Employee from './model/Employee';
-import Expense from './model/Expense';
-import ExpenseType from './model/ExpenseType';
+import BugetPlanView from './model/BugetPlanView';
+import CompanyView from './model/CompanyView';
+import DepartmentView from './model/DepartmentView';
+import EmployeeView from './model/EmployeeView';
+import ExpenseTypeView from './model/ExpenseTypeView';
+import ExpenseView from './model/ExpenseView';
 import Month from './model/Month';
 import BugetPlanApi from './api/BugetPlanApi';
 import CompanyApi from './api/CompanyApi';
@@ -70,40 +70,40 @@ export {
     ApiClient,
 
     /**
-     * The BugetPlan model constructor.
-     * @property {module:model/BugetPlan}
+     * The BugetPlanView model constructor.
+     * @property {module:model/BugetPlanView}
      */
-    BugetPlan,
+    BugetPlanView,
 
     /**
-     * The Company model constructor.
-     * @property {module:model/Company}
+     * The CompanyView model constructor.
+     * @property {module:model/CompanyView}
      */
-    Company,
+    CompanyView,
 
     /**
-     * The Department model constructor.
-     * @property {module:model/Department}
+     * The DepartmentView model constructor.
+     * @property {module:model/DepartmentView}
      */
-    Department,
+    DepartmentView,
 
     /**
-     * The Employee model constructor.
-     * @property {module:model/Employee}
+     * The EmployeeView model constructor.
+     * @property {module:model/EmployeeView}
      */
-    Employee,
+    EmployeeView,
 
     /**
-     * The Expense model constructor.
-     * @property {module:model/Expense}
+     * The ExpenseTypeView model constructor.
+     * @property {module:model/ExpenseTypeView}
      */
-    Expense,
+    ExpenseTypeView,
 
     /**
-     * The ExpenseType model constructor.
-     * @property {module:model/ExpenseType}
+     * The ExpenseView model constructor.
+     * @property {module:model/ExpenseView}
      */
-    ExpenseType,
+    ExpenseView,
 
     /**
      * The Month model constructor.

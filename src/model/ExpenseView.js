@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The Expense model module.
- * @module model/Expense
+ * The ExpenseView model module.
+ * @module model/ExpenseView
  * @version v1
  */
-class Expense {
+class ExpenseView {
     /**
-     * Constructs a new <code>Expense</code>.
-     * @alias module:model/Expense
+     * Constructs a new <code>ExpenseView</code>.
+     * @alias module:model/ExpenseView
      */
     constructor() { 
         
-        Expense.initialize(this);
+        ExpenseView.initialize(this);
     }
 
     /**
@@ -37,24 +37,18 @@ class Expense {
     }
 
     /**
-     * Constructs a <code>Expense</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ExpenseView</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Expense} obj Optional instance to populate.
-     * @return {module:model/Expense} The populated <code>Expense</code> instance.
+     * @param {module:model/ExpenseView} obj Optional instance to populate.
+     * @return {module:model/ExpenseView} The populated <code>ExpenseView</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Expense();
+            obj = obj || new ExpenseView();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('createDate')) {
-                obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date');
-            }
-            if (data.hasOwnProperty('modifyDate')) {
-                obj['modifyDate'] = ApiClient.convertToType(data['modifyDate'], 'Date');
             }
             if (data.hasOwnProperty('confirm')) {
                 obj['confirm'] = ApiClient.convertToType(data['confirm'], 'Boolean');
@@ -73,9 +67,9 @@ class Expense {
     }
 
     /**
-     * Validates the JSON data with respect to <code>Expense</code>.
+     * Validates the JSON data with respect to <code>ExpenseView</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Expense</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExpenseView</code>.
      */
     static validateJSON(data) {
 
@@ -90,42 +84,32 @@ class Expense {
 /**
  * @member {Number} id
  */
-Expense.prototype['id'] = undefined;
-
-/**
- * @member {Date} createDate
- */
-Expense.prototype['createDate'] = undefined;
-
-/**
- * @member {Date} modifyDate
- */
-Expense.prototype['modifyDate'] = undefined;
+ExpenseView.prototype['id'] = undefined;
 
 /**
  * @member {Boolean} confirm
  */
-Expense.prototype['confirm'] = undefined;
+ExpenseView.prototype['confirm'] = undefined;
 
 /**
  * @member {Boolean} valid
  */
-Expense.prototype['valid'] = undefined;
+ExpenseView.prototype['valid'] = undefined;
 
 /**
  * @member {Date} date
  */
-Expense.prototype['date'] = undefined;
+ExpenseView.prototype['date'] = undefined;
 
 /**
  * @member {Number} amount
  */
-Expense.prototype['amount'] = undefined;
+ExpenseView.prototype['amount'] = undefined;
 
 
 
 
 
 
-export default Expense;
+export default ExpenseView;
 

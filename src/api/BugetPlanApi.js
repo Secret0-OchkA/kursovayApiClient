@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import BugetPlan from '../model/BugetPlan';
+import BugetPlanView from '../model/BugetPlanView';
 import Month from '../model/Month';
 
 /**
@@ -48,12 +48,12 @@ export default class BugetPlanApi {
      * @param {Number} companyId 
      * @param {Number} departmnetId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/BugetPlan} opts.bugetPlan 
+     * @param {module:model/BugetPlanView} opts.bugetPlanView 
      * @param {module:api/BugetPlanApi~createBugetPlanCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createBugetPlan(companyId, departmnetId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['bugetPlan'];
+      let postBody = opts['bugetPlanView'];
       // verify the required parameter 'companyId' is set
       if (companyId === undefined || companyId === null) {
         throw new Error("Missing the required parameter 'companyId' when calling createBugetPlan");
@@ -142,7 +142,7 @@ export default class BugetPlanApi {
      * Callback function to receive the result of the getBugetPlan operation.
      * @callback module:api/BugetPlanApi~getBugetPlanCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BugetPlan} data The data returned by the service call.
+     * @param {module:model/BugetPlanView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -152,7 +152,7 @@ export default class BugetPlanApi {
      * @param {Number} departmnetId 
      * @param {Number} bugetPlanId 
      * @param {module:api/BugetPlanApi~getBugetPlanCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BugetPlan}
+     * data is of type: {@link module:model/BugetPlanView}
      */
     getBugetPlan(companyId, departmnetId, bugetPlanId, callback) {
       let postBody = null;
@@ -184,7 +184,7 @@ export default class BugetPlanApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = BugetPlan;
+      let returnType = BugetPlanView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -196,7 +196,7 @@ export default class BugetPlanApi {
      * Callback function to receive the result of the setMonthBuget operation.
      * @callback module:api/BugetPlanApi~setMonthBugetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BugetPlan} data The data returned by the service call.
+     * @param {module:model/BugetPlanView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -209,7 +209,7 @@ export default class BugetPlanApi {
      * @param {module:model/Month} opts.month 
      * @param {Number} opts.amount 
      * @param {module:api/BugetPlanApi~setMonthBugetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BugetPlan}
+     * data is of type: {@link module:model/BugetPlanView}
      */
     setMonthBuget(companyId, departmnetId, bugetPlanId, opts, callback) {
       opts = opts || {};
@@ -244,7 +244,7 @@ export default class BugetPlanApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = BugetPlan;
+      let returnType = BugetPlanView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

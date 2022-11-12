@@ -26,7 +26,7 @@ import MyApiV1 from 'my_api_v1';
 let apiInstance = new MyApiV1.ExpenseTypeApi();
 let companyId = 56; // Number | 
 let opts = {
-  'expenseType': new MyApiV1.ExpenseType() // ExpenseType | 
+  'expenseTypeView': new MyApiV1.ExpenseTypeView() // ExpenseTypeView | 
 };
 apiInstance.createExpenseTypeInCompany(companyId, opts, (error, data, response) => {
   if (error) {
@@ -43,7 +43,7 @@ apiInstance.createExpenseTypeInCompany(companyId, opts, (error, data, response) 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**|  | 
- **expenseType** | [**ExpenseType**](ExpenseType.md)|  | [optional] 
+ **expenseTypeView** | [**ExpenseTypeView**](ExpenseTypeView.md)|  | [optional] 
 
 ### Return type
 
@@ -106,7 +106,7 @@ No authorization required
 
 ## getEpxensTypesInCompany
 
-> [ExpenseType] getEpxensTypesInCompany(companyId)
+> [ExpenseTypeView] getEpxensTypesInCompany(companyId)
 
 get expense types in company
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ExpenseType]**](ExpenseType.md)
+[**[ExpenseTypeView]**](ExpenseTypeView.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ No authorization required
 
 ## getExpenseTypeInCompany
 
-> ExpenseType getExpenseTypeInCompany(companyId, expenseTypeId)
+> ExpenseTypeView getExpenseTypeInCompany(companyId, expenseTypeId)
 
 get expense type in company by id
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ExpenseType**](ExpenseType.md)
+[**ExpenseTypeView**](ExpenseTypeView.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ let apiInstance = new MyApiV1.ExpenseTypeApi();
 let companyId = 56; // Number | 
 let expenseTypeId = 56; // Number | 
 let opts = {
-  'expenseType': new MyApiV1.ExpenseType() // ExpenseType | 
+  'expenseTypeView': new MyApiV1.ExpenseTypeView() // ExpenseTypeView | 
 };
 apiInstance.updateExpenseType(companyId, expenseTypeId, opts, (error, data, response) => {
   if (error) {
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**|  | 
  **expenseTypeId** | **Number**|  | 
- **expenseType** | [**ExpenseType**](ExpenseType.md)|  | [optional] 
+ **expenseTypeView** | [**ExpenseTypeView**](ExpenseTypeView.md)|  | [optional] 
 
 ### Return type
 

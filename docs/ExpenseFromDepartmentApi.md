@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getExpenseInDeparment
 
-> Expense getExpenseInDeparment(companyId, departmnetId, expenseId)
+> ExpenseView getExpenseInDeparment(companyId, departmnetId, expenseId)
 
 get expense in department by id
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Expense**](Expense.md)
+[**ExpenseView**](ExpenseView.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 
 ## getExpesesInDepartment
 
-> [Expense] getExpesesInDepartment(companyId, departmnetId)
+> [ExpenseView] getExpesesInDepartment(companyId, departmnetId)
 
 get expenses in department
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Expense]**](Expense.md)
+[**[ExpenseView]**](ExpenseView.md)
 
 ### Authorization
 

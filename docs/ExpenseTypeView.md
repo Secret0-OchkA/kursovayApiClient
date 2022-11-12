@@ -1,12 +1,12 @@
-# MyApiV1.Employee
+# MyApiV1.ExpenseTypeView
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
-**createDate** | **Date** |  | [optional] 
-**modifyDate** | **Date** |  | [optional] 
 **name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**limit** | **Number** |  | [optional] 
 
 

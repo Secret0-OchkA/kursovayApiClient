@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MyApiV1.Department();
+    instance = new MyApiV1.ExpenseTypeView();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,34 @@
       object[property] = value;
   }
 
-  describe('Department', function() {
-    it('should create an instance of Department', function() {
-      // uncomment below and update the code to test Department
-      //var instance = new MyApiV1.Department();
-      //expect(instance).to.be.a(MyApiV1.Department);
+  describe('ExpenseTypeView', function() {
+    it('should create an instance of ExpenseTypeView', function() {
+      // uncomment below and update the code to test ExpenseTypeView
+      //var instance = new MyApiV1.ExpenseTypeView();
+      //expect(instance).to.be.a(MyApiV1.ExpenseTypeView);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new MyApiV1.Department();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createDate (base name: "createDate")', function() {
-      // uncomment below and update the code to test the property createDate
-      //var instance = new MyApiV1.Department();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property modifyDate (base name: "modifyDate")', function() {
-      // uncomment below and update the code to test the property modifyDate
-      //var instance = new MyApiV1.Department();
+      //var instance = new MyApiV1.ExpenseTypeView();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new MyApiV1.Department();
+      //var instance = new MyApiV1.ExpenseTypeView();
       //expect(instance).to.be();
     });
 
-    it('should have the property budget (base name: "budget")', function() {
-      // uncomment below and update the code to test the property budget
-      //var instance = new MyApiV1.Department();
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new MyApiV1.ExpenseTypeView();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property limit (base name: "limit")', function() {
+      // uncomment below and update the code to test the property limit
+      //var instance = new MyApiV1.ExpenseTypeView();
       //expect(instance).to.be();
     });
 

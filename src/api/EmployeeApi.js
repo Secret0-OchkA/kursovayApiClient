@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Employee from '../model/Employee';
+import EmployeeView from '../model/EmployeeView';
 
 /**
 * Employee service.
@@ -44,12 +44,12 @@ export default class EmployeeApi {
 
     /**
      * @param {Object} opts Optional parameters
-     * @param {module:model/Employee} opts.employee 
+     * @param {module:model/EmployeeView} opts.employeeView 
      * @param {module:api/EmployeeApi~createEmployeeCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createEmployee(opts, callback) {
       opts = opts || {};
-      let postBody = opts['employee'];
+      let postBody = opts['employeeView'];
 
       let pathParams = {
       };
@@ -115,14 +115,14 @@ export default class EmployeeApi {
      * Callback function to receive the result of the getEmployee operation.
      * @callback module:api/EmployeeApi~getEmployeeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Employee} data The data returned by the service call.
+     * @param {module:model/EmployeeView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {Number} id 
      * @param {module:api/EmployeeApi~getEmployeeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Employee}
+     * data is of type: {@link module:model/EmployeeView}
      */
     getEmployee(id, callback) {
       let postBody = null;
@@ -144,7 +144,7 @@ export default class EmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Employee;
+      let returnType = EmployeeView;
       return this.apiClient.callApi(
         '/api/Employee/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -156,13 +156,13 @@ export default class EmployeeApi {
      * Callback function to receive the result of the getEmployees operation.
      * @callback module:api/EmployeeApi~getEmployeesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Employee>} data The data returned by the service call.
+     * @param {Array.<module:model/EmployeeView>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {module:api/EmployeeApi~getEmployeesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Employee>}
+     * data is of type: {@link Array.<module:model/EmployeeView>}
      */
     getEmployees(callback) {
       let postBody = null;
@@ -179,7 +179,7 @@ export default class EmployeeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Employee];
+      let returnType = [EmployeeView];
       return this.apiClient.callApi(
         '/api/Employee', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

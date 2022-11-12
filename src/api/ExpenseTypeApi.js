@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import ExpenseType from '../model/ExpenseType';
+import ExpenseTypeView from '../model/ExpenseTypeView';
 
 /**
 * ExpenseType service.
@@ -46,12 +46,12 @@ export default class ExpenseTypeApi {
      * create new expenseType in company
      * @param {Number} companyId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/ExpenseType} opts.expenseType 
+     * @param {module:model/ExpenseTypeView} opts.expenseTypeView 
      * @param {module:api/ExpenseTypeApi~createExpenseTypeInCompanyCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createExpenseTypeInCompany(companyId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['expenseType'];
+      let postBody = opts['expenseTypeView'];
       // verify the required parameter 'companyId' is set
       if (companyId === undefined || companyId === null) {
         throw new Error("Missing the required parameter 'companyId' when calling createExpenseTypeInCompany");
@@ -129,7 +129,7 @@ export default class ExpenseTypeApi {
      * Callback function to receive the result of the getEpxensTypesInCompany operation.
      * @callback module:api/ExpenseTypeApi~getEpxensTypesInCompanyCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ExpenseType>} data The data returned by the service call.
+     * @param {Array.<module:model/ExpenseTypeView>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -137,7 +137,7 @@ export default class ExpenseTypeApi {
      * get expense types in company
      * @param {Number} companyId 
      * @param {module:api/ExpenseTypeApi~getEpxensTypesInCompanyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ExpenseType>}
+     * data is of type: {@link Array.<module:model/ExpenseTypeView>}
      */
     getEpxensTypesInCompany(companyId, callback) {
       let postBody = null;
@@ -159,7 +159,7 @@ export default class ExpenseTypeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [ExpenseType];
+      let returnType = [ExpenseTypeView];
       return this.apiClient.callApi(
         '/api/Company/{companyId}/ExpenseType', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -171,7 +171,7 @@ export default class ExpenseTypeApi {
      * Callback function to receive the result of the getExpenseTypeInCompany operation.
      * @callback module:api/ExpenseTypeApi~getExpenseTypeInCompanyCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ExpenseType} data The data returned by the service call.
+     * @param {module:model/ExpenseTypeView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -180,7 +180,7 @@ export default class ExpenseTypeApi {
      * @param {Number} companyId 
      * @param {Number} expenseTypeId 
      * @param {module:api/ExpenseTypeApi~getExpenseTypeInCompanyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ExpenseType}
+     * data is of type: {@link module:model/ExpenseTypeView}
      */
     getExpenseTypeInCompany(companyId, expenseTypeId, callback) {
       let postBody = null;
@@ -207,7 +207,7 @@ export default class ExpenseTypeApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ExpenseType;
+      let returnType = ExpenseTypeView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/ExpenseType/{expenseTypeId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -228,12 +228,12 @@ export default class ExpenseTypeApi {
      * @param {Number} companyId 
      * @param {Number} expenseTypeId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/ExpenseType} opts.expenseType 
+     * @param {module:model/ExpenseTypeView} opts.expenseTypeView 
      * @param {module:api/ExpenseTypeApi~updateExpenseTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
     updateExpenseType(companyId, expenseTypeId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['expenseType'];
+      let postBody = opts['expenseTypeView'];
       // verify the required parameter 'companyId' is set
       if (companyId === undefined || companyId === null) {
         throw new Error("Missing the required parameter 'companyId' when calling updateExpenseType");

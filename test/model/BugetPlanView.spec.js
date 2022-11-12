@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MyApiV1.BugetPlan();
+    instance = new MyApiV1.BugetPlanView();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,100 +47,88 @@
       object[property] = value;
   }
 
-  describe('BugetPlan', function() {
-    it('should create an instance of BugetPlan', function() {
-      // uncomment below and update the code to test BugetPlan
-      //var instance = new MyApiV1.BugetPlan();
-      //expect(instance).to.be.a(MyApiV1.BugetPlan);
+  describe('BugetPlanView', function() {
+    it('should create an instance of BugetPlanView', function() {
+      // uncomment below and update the code to test BugetPlanView
+      //var instance = new MyApiV1.BugetPlanView();
+      //expect(instance).to.be.a(MyApiV1.BugetPlanView);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new MyApiV1.BugetPlan();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createDate (base name: "createDate")', function() {
-      // uncomment below and update the code to test the property createDate
-      //var instance = new MyApiV1.BugetPlan();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property modifyDate (base name: "modifyDate")', function() {
-      // uncomment below and update the code to test the property modifyDate
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property january (base name: "january")', function() {
       // uncomment below and update the code to test the property january
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property february (base name: "february")', function() {
       // uncomment below and update the code to test the property february
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property march (base name: "march")', function() {
       // uncomment below and update the code to test the property march
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property april (base name: "april")', function() {
       // uncomment below and update the code to test the property april
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property may (base name: "may")', function() {
       // uncomment below and update the code to test the property may
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property june (base name: "june")', function() {
       // uncomment below and update the code to test the property june
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property july (base name: "july")', function() {
       // uncomment below and update the code to test the property july
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property august (base name: "august")', function() {
       // uncomment below and update the code to test the property august
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property september (base name: "september")', function() {
       // uncomment below and update the code to test the property september
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property october (base name: "october")', function() {
       // uncomment below and update the code to test the property october
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property november (base name: "november")', function() {
       // uncomment below and update the code to test the property november
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 
     it('should have the property december (base name: "december")', function() {
       // uncomment below and update the code to test the property december
-      //var instance = new MyApiV1.BugetPlan();
+      //var instance = new MyApiV1.BugetPlanView();
       //expect(instance).to.be();
     });
 

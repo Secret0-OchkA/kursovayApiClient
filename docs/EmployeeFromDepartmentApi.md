@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## dismissEmployee
 
-> Employee dismissEmployee(companyId, departmnetId, employeeId)
+> EmployeeView dismissEmployee(companyId, departmnetId, employeeId)
 
 remove employee from department in company
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Employee**](Employee.md)
+[**EmployeeView**](EmployeeView.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 
 ## getEmployeeInDepartment
 
-> Employee getEmployeeInDepartment(companyId, departmnetId, employeeId)
+> EmployeeView getEmployeeInDepartment(companyId, departmnetId, employeeId)
 
 get employee in department in company by id
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Employee**](Employee.md)
+[**EmployeeView**](EmployeeView.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 
 ## getEmployeesInDepartment
 
-> [Employee] getEmployeesInDepartment(companyId, departmnetId)
+> [EmployeeView] getEmployeesInDepartment(companyId, departmnetId)
 
 get employees in department in company
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Employee]**](Employee.md)
+[**[EmployeeView]**](EmployeeView.md)
 
 ### Authorization
 

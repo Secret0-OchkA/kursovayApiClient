@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Department from '../model/Department';
+import DepartmentView from '../model/DepartmentView';
 
 /**
 * Department service.
@@ -46,12 +46,12 @@ export default class DepartmentApi {
      * create department in company
      * @param {Number} companyId 
      * @param {Object} opts Optional parameters
-     * @param {module:model/Department} opts.department 
+     * @param {module:model/DepartmentView} opts.departmentView 
      * @param {module:api/DepartmentApi~createDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createDepartment(companyId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['department'];
+      let postBody = opts['departmentView'];
       // verify the required parameter 'companyId' is set
       if (companyId === undefined || companyId === null) {
         throw new Error("Missing the required parameter 'companyId' when calling createDepartment");
@@ -127,7 +127,7 @@ export default class DepartmentApi {
      * Callback function to receive the result of the getDepartment operation.
      * @callback module:api/DepartmentApi~getDepartmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Department} data The data returned by the service call.
+     * @param {module:model/DepartmentView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -136,7 +136,7 @@ export default class DepartmentApi {
      * @param {Number} companyId 
      * @param {Number} departmnetId 
      * @param {module:api/DepartmentApi~getDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Department}
+     * data is of type: {@link module:model/DepartmentView}
      */
     getDepartment(companyId, departmnetId, callback) {
       let postBody = null;
@@ -163,7 +163,7 @@ export default class DepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Department;
+      let returnType = DepartmentView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -175,7 +175,7 @@ export default class DepartmentApi {
      * Callback function to receive the result of the getDepartments operation.
      * @callback module:api/DepartmentApi~getDepartmentsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Department>} data The data returned by the service call.
+     * @param {Array.<module:model/DepartmentView>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -183,7 +183,7 @@ export default class DepartmentApi {
      * get departments in company
      * @param {Number} companyId 
      * @param {module:api/DepartmentApi~getDepartmentsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Department>}
+     * data is of type: {@link Array.<module:model/DepartmentView>}
      */
     getDepartments(companyId, callback) {
       let postBody = null;
@@ -205,7 +205,7 @@ export default class DepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Department];
+      let returnType = [DepartmentView];
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -217,7 +217,7 @@ export default class DepartmentApi {
      * Callback function to receive the result of the setBugetDeparmtnet operation.
      * @callback module:api/DepartmentApi~setBugetDeparmtnetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Department} data The data returned by the service call.
+     * @param {module:model/DepartmentView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -228,7 +228,7 @@ export default class DepartmentApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.buget 
      * @param {module:api/DepartmentApi~setBugetDeparmtnetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Department}
+     * data is of type: {@link module:model/DepartmentView}
      */
     setBugetDeparmtnet(departmnetId, companyId, opts, callback) {
       opts = opts || {};
@@ -257,7 +257,7 @@ export default class DepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Department;
+      let returnType = DepartmentView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

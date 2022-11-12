@@ -1,12 +1,10 @@
-# MyApiV1.BugetPlan
+# MyApiV1.BugetPlanView
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
-**createDate** | **Date** |  | [optional] 
-**modifyDate** | **Date** |  | [optional] 
 **january** | **Number** |  | [optional] 
 **february** | **Number** |  | [optional] 
 **march** | **Number** |  | [optional] 

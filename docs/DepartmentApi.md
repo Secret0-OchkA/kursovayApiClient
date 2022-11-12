@@ -26,7 +26,7 @@ import MyApiV1 from 'my_api_v1';
 let apiInstance = new MyApiV1.DepartmentApi();
 let companyId = 56; // Number | 
 let opts = {
-  'department': new MyApiV1.Department() // Department | 
+  'departmentView': new MyApiV1.DepartmentView() // DepartmentView | 
 };
 apiInstance.createDepartment(companyId, opts, (error, data, response) => {
   if (error) {
@@ -43,7 +43,7 @@ apiInstance.createDepartment(companyId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**|  | 
- **department** | [**Department**](Department.md)|  | [optional] 
+ **departmentView** | [**DepartmentView**](DepartmentView.md)|  | [optional] 
 
 ### Return type
 
@@ -108,7 +108,7 @@ No authorization required
 
 ## getDepartment
 
-> Department getDepartment(companyId, departmnetId)
+> DepartmentView getDepartment(companyId, departmnetId)
 
 get department by id in company
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Department**](Department.md)
+[**DepartmentView**](DepartmentView.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ No authorization required
 
 ## getDepartments
 
-> [Department] getDepartments(companyId)
+> [DepartmentView] getDepartments(companyId)
 
 get departments in company
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Department]**](Department.md)
+[**[DepartmentView]**](DepartmentView.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ No authorization required
 
 ## setBugetDeparmtnet
 
-> Department setBugetDeparmtnet(departmnetId, companyId, opts)
+> DepartmentView setBugetDeparmtnet(departmnetId, companyId, opts)
 
 set buget department by id in company
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Department**](Department.md)
+[**DepartmentView**](DepartmentView.md)
 
 ### Authorization
 

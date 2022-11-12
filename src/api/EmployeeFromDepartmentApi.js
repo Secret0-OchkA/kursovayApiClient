@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Employee from '../model/Employee';
+import EmployeeView from '../model/EmployeeView';
 
 /**
 * EmployeeFromDepartment service.
@@ -38,7 +38,7 @@ export default class EmployeeFromDepartmentApi {
      * Callback function to receive the result of the dismissEmployee operation.
      * @callback module:api/EmployeeFromDepartmentApi~dismissEmployeeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Employee} data The data returned by the service call.
+     * @param {module:model/EmployeeView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -48,7 +48,7 @@ export default class EmployeeFromDepartmentApi {
      * @param {Number} departmnetId 
      * @param {Number} employeeId 
      * @param {module:api/EmployeeFromDepartmentApi~dismissEmployeeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Employee}
+     * data is of type: {@link module:model/EmployeeView}
      */
     dismissEmployee(companyId, departmnetId, employeeId, callback) {
       let postBody = null;
@@ -80,7 +80,7 @@ export default class EmployeeFromDepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Employee;
+      let returnType = EmployeeView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/EmployeeFromDepartment/{employeeId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -92,7 +92,7 @@ export default class EmployeeFromDepartmentApi {
      * Callback function to receive the result of the getEmployeeInDepartment operation.
      * @callback module:api/EmployeeFromDepartmentApi~getEmployeeInDepartmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Employee} data The data returned by the service call.
+     * @param {module:model/EmployeeView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -102,7 +102,7 @@ export default class EmployeeFromDepartmentApi {
      * @param {Number} departmnetId 
      * @param {Number} employeeId 
      * @param {module:api/EmployeeFromDepartmentApi~getEmployeeInDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Employee}
+     * data is of type: {@link module:model/EmployeeView}
      */
     getEmployeeInDepartment(companyId, departmnetId, employeeId, callback) {
       let postBody = null;
@@ -134,7 +134,7 @@ export default class EmployeeFromDepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Employee;
+      let returnType = EmployeeView;
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/EmployeeFromDepartment/{employeeId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -146,7 +146,7 @@ export default class EmployeeFromDepartmentApi {
      * Callback function to receive the result of the getEmployeesInDepartment operation.
      * @callback module:api/EmployeeFromDepartmentApi~getEmployeesInDepartmentCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Employee>} data The data returned by the service call.
+     * @param {Array.<module:model/EmployeeView>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -155,7 +155,7 @@ export default class EmployeeFromDepartmentApi {
      * @param {Number} companyId 
      * @param {Number} departmnetId 
      * @param {module:api/EmployeeFromDepartmentApi~getEmployeesInDepartmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Employee>}
+     * data is of type: {@link Array.<module:model/EmployeeView>}
      */
     getEmployeesInDepartment(companyId, departmnetId, callback) {
       let postBody = null;
@@ -182,7 +182,7 @@ export default class EmployeeFromDepartmentApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Employee];
+      let returnType = [EmployeeView];
       return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/EmployeeFromDepartment', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

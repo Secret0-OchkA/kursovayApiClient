@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Company from '../model/Company';
+import CompanyView from '../model/CompanyView';
 
 /**
 * Company service.
@@ -38,7 +38,7 @@ export default class CompanyApi {
      * Callback function to receive the result of the changeName operation.
      * @callback module:api/CompanyApi~changeNameCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Company} data The data returned by the service call.
+     * @param {module:model/CompanyView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,7 +47,7 @@ export default class CompanyApi {
      * @param {Number} id 
      * @param {String} name 
      * @param {module:api/CompanyApi~changeNameCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Company}
+     * data is of type: {@link module:model/CompanyView}
      */
     changeName(id, name, callback) {
       let postBody = null;
@@ -74,7 +74,7 @@ export default class CompanyApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Company;
+      let returnType = CompanyView;
       return this.apiClient.callApi(
         '/api/Company/{id}/{name}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -93,12 +93,12 @@ export default class CompanyApi {
     /**
      * create company from object
      * @param {Object} opts Optional parameters
-     * @param {module:model/Company} opts.company 
+     * @param {module:model/CompanyView} opts.companyView 
      * @param {module:api/CompanyApi~createCompanyCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createCompany(opts, callback) {
       opts = opts || {};
-      let postBody = opts['company'];
+      let postBody = opts['companyView'];
 
       let pathParams = {
       };
@@ -165,7 +165,7 @@ export default class CompanyApi {
      * Callback function to receive the result of the getCompany operation.
      * @callback module:api/CompanyApi~getCompanyCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Company} data The data returned by the service call.
+     * @param {module:model/CompanyView} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -173,7 +173,7 @@ export default class CompanyApi {
      * get company by id
      * @param {Number} id 
      * @param {module:api/CompanyApi~getCompanyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Company}
+     * data is of type: {@link module:model/CompanyView}
      */
     getCompany(id, callback) {
       let postBody = null;
@@ -195,7 +195,7 @@ export default class CompanyApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Company;
+      let returnType = CompanyView;
       return this.apiClient.callApi(
         '/api/Company/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -207,14 +207,14 @@ export default class CompanyApi {
      * Callback function to receive the result of the getCompanyes operation.
      * @callback module:api/CompanyApi~getCompanyesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Company>} data The data returned by the service call.
+     * @param {Array.<module:model/CompanyView>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * get all company
      * @param {module:api/CompanyApi~getCompanyesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Company>}
+     * data is of type: {@link Array.<module:model/CompanyView>}
      */
     getCompanyes(callback) {
       let postBody = null;
@@ -231,7 +231,7 @@ export default class CompanyApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Company];
+      let returnType = [CompanyView];
       return this.apiClient.callApi(
         '/api/Company', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

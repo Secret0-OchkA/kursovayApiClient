@@ -26,7 +26,7 @@ let apiInstance = new MyApiV1.BugetPlanApi();
 let companyId = 56; // Number | 
 let departmnetId = 56; // Number | 
 let opts = {
-  'bugetPlan': new MyApiV1.BugetPlan() // BugetPlan | 
+  'bugetPlanView': new MyApiV1.BugetPlanView() // BugetPlanView | 
 };
 apiInstance.createBugetPlan(companyId, departmnetId, opts, (error, data, response) => {
   if (error) {
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **Number**|  | 
  **departmnetId** | **Number**|  | 
- **bugetPlan** | [**BugetPlan**](BugetPlan.md)|  | [optional] 
+ **bugetPlanView** | [**BugetPlanView**](BugetPlanView.md)|  | [optional] 
 
 ### Return type
 
@@ -109,7 +109,7 @@ No authorization required
 
 ## getBugetPlan
 
-> BugetPlan getBugetPlan(companyId, departmnetId, bugetPlanId)
+> BugetPlanView getBugetPlan(companyId, departmnetId, bugetPlanId)
 
 get buget plan
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BugetPlan**](BugetPlan.md)
+[**BugetPlanView**](BugetPlanView.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ No authorization required
 
 ## setMonthBuget
 
-> BugetPlan setMonthBuget(companyId, departmnetId, bugetPlanId, opts)
+> BugetPlanView setMonthBuget(companyId, departmnetId, bugetPlanId, opts)
 
 
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BugetPlan**](BugetPlan.md)
+[**BugetPlanView**](BugetPlanView.md)
 
 ### Authorization
 

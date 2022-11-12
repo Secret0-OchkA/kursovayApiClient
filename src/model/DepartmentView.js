@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The Department model module.
- * @module model/Department
+ * The DepartmentView model module.
+ * @module model/DepartmentView
  * @version v1
  */
-class Department {
+class DepartmentView {
     /**
-     * Constructs a new <code>Department</code>.
-     * @alias module:model/Department
+     * Constructs a new <code>DepartmentView</code>.
+     * @alias module:model/DepartmentView
      */
     constructor() { 
         
-        Department.initialize(this);
+        DepartmentView.initialize(this);
     }
 
     /**
@@ -37,24 +37,18 @@ class Department {
     }
 
     /**
-     * Constructs a <code>Department</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DepartmentView</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Department} obj Optional instance to populate.
-     * @return {module:model/Department} The populated <code>Department</code> instance.
+     * @param {module:model/DepartmentView} obj Optional instance to populate.
+     * @return {module:model/DepartmentView} The populated <code>DepartmentView</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Department();
+            obj = obj || new DepartmentView();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('createDate')) {
-                obj['createDate'] = ApiClient.convertToType(data['createDate'], 'Date');
-            }
-            if (data.hasOwnProperty('modifyDate')) {
-                obj['modifyDate'] = ApiClient.convertToType(data['modifyDate'], 'Date');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -67,9 +61,9 @@ class Department {
     }
 
     /**
-     * Validates the JSON data with respect to <code>Department</code>.
+     * Validates the JSON data with respect to <code>DepartmentView</code>.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Department</code>.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DepartmentView</code>.
      */
     static validateJSON(data) {
         // ensure the json data is a string
@@ -88,32 +82,22 @@ class Department {
 /**
  * @member {Number} id
  */
-Department.prototype['id'] = undefined;
-
-/**
- * @member {Date} createDate
- */
-Department.prototype['createDate'] = undefined;
-
-/**
- * @member {Date} modifyDate
- */
-Department.prototype['modifyDate'] = undefined;
+DepartmentView.prototype['id'] = undefined;
 
 /**
  * @member {String} name
  */
-Department.prototype['name'] = undefined;
+DepartmentView.prototype['name'] = undefined;
 
 /**
  * @member {Number} budget
  */
-Department.prototype['budget'] = undefined;
+DepartmentView.prototype['budget'] = undefined;
 
 
 
 
 
 
-export default Department;
+export default DepartmentView;
 

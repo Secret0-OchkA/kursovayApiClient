@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**changeAmmount**](ExpenseFromEmployeeApi.md#changeAmmount) | **PUT** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/ChangeAmmount | Change ammout if not confirmed
 [**confirmExpense**](ExpenseFromEmployeeApi.md#confirmExpense) | **PUT** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/Confirm | confirm expense if expense is valid
 [**createExpense**](ExpenseFromEmployeeApi.md#createExpense) | **POST** /api/Employee/{employeeId}/ExpenseFromEmployee | create expense for employee
+[**deleteExpense**](ExpenseFromEmployeeApi.md#deleteExpense) | **DELETE** /api/Employee/{employeeId}/ExpenseFromEmployee/{id} | Delete expense
 [**getExpense**](ExpenseFromEmployeeApi.md#getExpense) | **GET** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId} | get expense in employee
 [**getExpenses**](ExpenseFromEmployeeApi.md#getExpenses) | **GET** /api/Employee/{employeeId}/ExpenseFromEmployee | get expenses in emploee
 [**setExpenseType**](ExpenseFromEmployeeApi.md#setExpenseType) | **PUT** /api/Employee/{employeeId}/ExpenseFromEmployee/{expenseId}/SetType/{expenseTypeId} | change type if not confirmed
@@ -16,7 +17,7 @@ Method | HTTP request | Description
 
 ## changeAmmount
 
-> Expense changeAmmount(employeeId, expenseId, opts)
+> ExpenseView changeAmmount(employeeId, expenseId, opts)
 
 Change ammout if not confirmed
 
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Expense**](Expense.md)
+[**ExpenseView**](ExpenseView.md)
 
 ### Authorization
 
@@ -65,7 +66,7 @@ No authorization required
 
 ## confirmExpense
 
-> Expense confirmExpense(employeeId, expenseId)
+> ExpenseView confirmExpense(employeeId, expenseId)
 
 confirm expense if expense is valid
 
@@ -96,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Expense**](Expense.md)
+[**ExpenseView**](ExpenseView.md)
 
 ### Authorization
 
@@ -122,7 +123,7 @@ import MyApiV1 from 'my_api_v1';
 let apiInstance = new MyApiV1.ExpenseFromEmployeeApi();
 let employeeId = 56; // Number | 
 let opts = {
-  'expense': new MyApiV1.Expense() // Expense | 
+  'expenseView': new MyApiV1.ExpenseView() // ExpenseView | 
 };
 apiInstance.createExpense(employeeId, opts, (error, data, response) => {
   if (error) {
@@ -139,7 +140,7 @@ apiInstance.createExpense(employeeId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **employeeId** | **Number**|  | 
- **expense** | [**Expense**](Expense.md)|  | [optional] 
+ **expenseView** | [**ExpenseView**](ExpenseView.md)|  | [optional] 
 
 ### Return type
 
@@ -155,9 +156,54 @@ No authorization required
 - **Accept**: Not defined
 
 
+## deleteExpense
+
+> deleteExpense(id, employeeId)
+
+Delete expense
+
+### Example
+
+```javascript
+import MyApiV1 from 'my_api_v1';
+
+let apiInstance = new MyApiV1.ExpenseFromEmployeeApi();
+let id = 56; // Number | 
+let employeeId = "employeeId_example"; // String | 
+apiInstance.deleteExpense(id, employeeId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**|  | 
+ **employeeId** | **String**|  | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
 ## getExpense
 
-> Expense getExpense(employeeId, expenseId)
+> ExpenseView getExpense(employeeId, expenseId)
 
 get expense in employee
 
@@ -188,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Expense**](Expense.md)
+[**ExpenseView**](ExpenseView.md)
 
 ### Authorization
 
@@ -202,7 +248,7 @@ No authorization required
 
 ## getExpenses
 
-> [Expense] getExpenses(employeeId)
+> [ExpenseView] getExpenses(employeeId)
 
 get expenses in emploee
 
@@ -231,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Expense]**](Expense.md)
+[**[ExpenseView]**](ExpenseView.md)
 
 ### Authorization
 
@@ -245,7 +291,7 @@ No authorization required
 
 ## setExpenseType
 
-> Expense setExpenseType(employeeId, expenseId, expenseTypeId)
+> ExpenseView setExpenseType(employeeId, expenseId, expenseTypeId)
 
 change type if not confirmed
 
@@ -278,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Expense**](Expense.md)
+[**ExpenseView**](ExpenseView.md)
 
 ### Authorization
 
@@ -292,7 +338,7 @@ No authorization required
 
 ## validateEpxense
 
-> Expense validateEpxense(employeeId, expenseId)
+> ExpenseView validateEpxense(employeeId, expenseId)
 
 validate expense
 
@@ -323,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Expense**](Expense.md)
+[**ExpenseView**](ExpenseView.md)
 
 ### Authorization
 

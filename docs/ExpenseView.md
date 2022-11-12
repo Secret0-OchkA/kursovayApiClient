@@ -1,12 +1,10 @@
-# MyApiV1.Expense
+# MyApiV1.ExpenseView
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
-**createDate** | **Date** |  | [optional] 
-**modifyDate** | **Date** |  | [optional] 
 **confirm** | **Boolean** |  | [optional] 
 **valid** | **Boolean** |  | [optional] 
 **date** | **Date** |  | [optional] 
