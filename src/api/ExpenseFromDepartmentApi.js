@@ -82,7 +82,49 @@ export default class ExpenseFromDepartmentApi {
       let accepts = ['application/json'];
       let returnType = ExpenseView;
       return this.apiClient.callApi(
-        '/api/Company/{companyId}/Department/{departmnetId}/ExpenseFromDepartment/{expenseId}', 'GET',
+        '/api/Company/{companyId}/ExpenseFromDepartment/department/{departmnetId}/{expenseId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getExpesesInCompany operation.
+     * @callback module:api/ExpenseFromDepartmentApi~getExpesesInCompanyCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ExpenseView>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get expenses in company
+     * @param {Number} companyId 
+     * @param {module:api/ExpenseFromDepartmentApi~getExpesesInCompanyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ExpenseView>}
+     */
+    getExpesesInCompany(companyId, callback) {
+      let postBody = null;
+      // verify the required parameter 'companyId' is set
+      if (companyId === undefined || companyId === null) {
+        throw new Error("Missing the required parameter 'companyId' when calling getExpesesInCompany");
+      }
+
+      let pathParams = {
+        'companyId': companyId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [ExpenseView];
+      return this.apiClient.callApi(
+        '/api/Company/{companyId}/ExpenseFromDepartment', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -130,7 +172,7 @@ export default class ExpenseFromDepartmentApi {
       let accepts = ['application/json'];
       let returnType = [ExpenseView];
       return this.apiClient.callApi(
-        '/api/Company/{companyId}/Department/{departmnetId}/ExpenseFromDepartment', 'GET',
+        '/api/Company/{companyId}/ExpenseFromDepartment/department/{departmnetId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

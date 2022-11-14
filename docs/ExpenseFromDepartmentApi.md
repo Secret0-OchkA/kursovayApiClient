@@ -4,8 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getExpenseInDeparment**](ExpenseFromDepartmentApi.md#getExpenseInDeparment) | **GET** /api/Company/{companyId}/Department/{departmnetId}/ExpenseFromDepartment/{expenseId} | get expense in department by id
-[**getExpesesInDepartment**](ExpenseFromDepartmentApi.md#getExpesesInDepartment) | **GET** /api/Company/{companyId}/Department/{departmnetId}/ExpenseFromDepartment | get expenses in department
+[**getExpenseInDeparment**](ExpenseFromDepartmentApi.md#getExpenseInDeparment) | **GET** /api/Company/{companyId}/ExpenseFromDepartment/department/{departmnetId}/{expenseId} | get expense in department by id
+[**getExpesesInCompany**](ExpenseFromDepartmentApi.md#getExpesesInCompany) | **GET** /api/Company/{companyId}/ExpenseFromDepartment | get expenses in company
+[**getExpesesInDepartment**](ExpenseFromDepartmentApi.md#getExpesesInDepartment) | **GET** /api/Company/{companyId}/ExpenseFromDepartment/department/{departmnetId} | get expenses in department
 
 
 
@@ -45,6 +46,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ExpenseView**](ExpenseView.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getExpesesInCompany
+
+> [ExpenseView] getExpesesInCompany(companyId)
+
+get expenses in company
+
+### Example
+
+```javascript
+import MyApiV1 from 'my_api_v1';
+
+let apiInstance = new MyApiV1.ExpenseFromDepartmentApi();
+let companyId = 56; // Number | 
+apiInstance.getExpesesInCompany(companyId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**|  | 
+
+### Return type
+
+[**[ExpenseView]**](ExpenseView.md)
 
 ### Authorization
 
