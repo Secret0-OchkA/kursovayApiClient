@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **date** | **Date** |  | [optional] 
 **amount** | **Number** |  | [optional] 
 **expenseTypeId** | **Number** |  | [optional] 
+**employeeId** | **Number** |  | [optional] 
 
 
