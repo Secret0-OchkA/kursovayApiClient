@@ -62,6 +62,9 @@ class ExpenseView {
             if (data.hasOwnProperty('amount')) {
                 obj['amount'] = ApiClient.convertToType(data['amount'], 'Number');
             }
+            if (data.hasOwnProperty('ExpenseTypeId')) {
+                obj['ExpenseTypeId'] = ApiClient.convertToType(data['ExpenseTypeId'], 'Number');
+            }
         }
         return obj;
     }
@@ -105,6 +108,11 @@ ExpenseView.prototype['date'] = undefined;
  * @member {Number} amount
  */
 ExpenseView.prototype['amount'] = undefined;
+
+/**
+ * @member {Number} ExpenseTypeId
+ */
+ExpenseView.prototype['ExpenseTypeId'] = undefined;
 
 
 

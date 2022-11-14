@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **valid** | **Boolean** |  | [optional] 
 **date** | **Date** |  | [optional] 
 **amount** | **Number** |  | [optional] 
+**expenseTypeId** | **Number** |  | [optional] 
 
 
