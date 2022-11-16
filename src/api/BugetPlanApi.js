@@ -147,14 +147,13 @@ export default class BugetPlanApi {
      */
 
     /**
-     * get buget plan
+     * get buget plan by department
      * @param {Number} companyId 
      * @param {Number} departmnetId 
-     * @param {Number} bugetPlanId 
      * @param {module:api/BugetPlanApi~getBugetPlanCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/BugetPlanView}
      */
-    getBugetPlan(companyId, departmnetId, bugetPlanId, callback) {
+    getBugetPlan(companyId, departmnetId, callback) {
       let postBody = null;
       // verify the required parameter 'companyId' is set
       if (companyId === undefined || companyId === null) {
@@ -164,9 +163,58 @@ export default class BugetPlanApi {
       if (departmnetId === undefined || departmnetId === null) {
         throw new Error("Missing the required parameter 'departmnetId' when calling getBugetPlan");
       }
+
+      let pathParams = {
+        'companyId': companyId,
+        'departmnetId': departmnetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = BugetPlanView;
+      return this.apiClient.callApi(
+        '/api/Company/{companyId}/Department/{departmnetId}/BugetPlan', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getBugetPlanById operation.
+     * @callback module:api/BugetPlanApi~getBugetPlanByIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/BugetPlanView} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * get buget plan
+     * @param {Number} companyId 
+     * @param {Number} departmnetId 
+     * @param {Number} bugetPlanId 
+     * @param {module:api/BugetPlanApi~getBugetPlanByIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/BugetPlanView}
+     */
+    getBugetPlanById(companyId, departmnetId, bugetPlanId, callback) {
+      let postBody = null;
+      // verify the required parameter 'companyId' is set
+      if (companyId === undefined || companyId === null) {
+        throw new Error("Missing the required parameter 'companyId' when calling getBugetPlanById");
+      }
+      // verify the required parameter 'departmnetId' is set
+      if (departmnetId === undefined || departmnetId === null) {
+        throw new Error("Missing the required parameter 'departmnetId' when calling getBugetPlanById");
+      }
       // verify the required parameter 'bugetPlanId' is set
       if (bugetPlanId === undefined || bugetPlanId === null) {
-        throw new Error("Missing the required parameter 'bugetPlanId' when calling getBugetPlan");
+        throw new Error("Missing the required parameter 'bugetPlanId' when calling getBugetPlanById");
       }
 
       let pathParams = {

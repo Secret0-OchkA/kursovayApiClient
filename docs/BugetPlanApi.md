@@ -6,7 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createBugetPlan**](BugetPlanApi.md#createBugetPlan) | **POST** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan | можно создать только 1 на департамент
 [**deletBugetPlan**](BugetPlanApi.md#deletBugetPlan) | **DELETE** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | delet bugetplan
-[**getBugetPlan**](BugetPlanApi.md#getBugetPlan) | **GET** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | get buget plan
+[**getBugetPlan**](BugetPlanApi.md#getBugetPlan) | **GET** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan | get buget plan by department
+[**getBugetPlanById**](BugetPlanApi.md#getBugetPlanById) | **GET** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | get buget plan
 [**setMonthBuget**](BugetPlanApi.md#setMonthBuget) | **PUT** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | 
 
 
@@ -109,7 +110,52 @@ No authorization required
 
 ## getBugetPlan
 
-> BugetPlanView getBugetPlan(companyId, departmnetId, bugetPlanId)
+> BugetPlanView getBugetPlan(companyId, departmnetId)
+
+get buget plan by department
+
+### Example
+
+```javascript
+import MyApiV1 from 'my_api_v1';
+
+let apiInstance = new MyApiV1.BugetPlanApi();
+let companyId = 56; // Number | 
+let departmnetId = 56; // Number | 
+apiInstance.getBugetPlan(companyId, departmnetId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**|  | 
+ **departmnetId** | **Number**|  | 
+
+### Return type
+
+[**BugetPlanView**](BugetPlanView.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getBugetPlanById
+
+> BugetPlanView getBugetPlanById(companyId, departmnetId, bugetPlanId)
 
 get buget plan
 
@@ -122,7 +168,7 @@ let apiInstance = new MyApiV1.BugetPlanApi();
 let companyId = 56; // Number | 
 let departmnetId = 56; // Number | 
 let bugetPlanId = 56; // Number | 
-apiInstance.getBugetPlan(companyId, departmnetId, bugetPlanId, (error, data, response) => {
+apiInstance.getBugetPlanById(companyId, departmnetId, bugetPlanId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
