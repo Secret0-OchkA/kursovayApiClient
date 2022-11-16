@@ -8,7 +8,8 @@ Method | HTTP request | Description
 [**deletBugetPlan**](BugetPlanApi.md#deletBugetPlan) | **DELETE** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | delet bugetplan
 [**getBugetPlan**](BugetPlanApi.md#getBugetPlan) | **GET** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan | get buget plan by department
 [**getBugetPlanById**](BugetPlanApi.md#getBugetPlanById) | **GET** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | get buget plan
-[**setMonthBuget**](BugetPlanApi.md#setMonthBuget) | **PUT** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | 
+[**setMonthBuget**](BugetPlanApi.md#setMonthBuget) | **PUT** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId}/SetMonthBuget | 
+[**updateBugetPlan**](BugetPlanApi.md#updateBugetPlan) | **PUT** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | 
 
 
 
@@ -250,5 +251,56 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## updateBugetPlan
+
+> BugetPlanView updateBugetPlan(companyId, departmnetId, bugetPlanId, opts)
+
+
+
+### Example
+
+```javascript
+import MyApiV1 from 'my_api_v1';
+
+let apiInstance = new MyApiV1.BugetPlanApi();
+let companyId = 56; // Number | 
+let departmnetId = 56; // Number | 
+let bugetPlanId = 56; // Number | 
+let opts = {
+  'bugetPlanView': new MyApiV1.BugetPlanView() // BugetPlanView | 
+};
+apiInstance.updateBugetPlan(companyId, departmnetId, bugetPlanId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **Number**|  | 
+ **departmnetId** | **Number**|  | 
+ **bugetPlanId** | **Number**|  | 
+ **bugetPlanView** | [**BugetPlanView**](BugetPlanView.md)|  | [optional] 
+
+### Return type
+
+[**BugetPlanView**](BugetPlanView.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
 - **Accept**: application/json
 

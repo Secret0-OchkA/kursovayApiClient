@@ -129,7 +129,8 @@ Class | Method | HTTP request | Description
 *MyApiV1.BugetPlanApi* | [**deletBugetPlan**](docs/BugetPlanApi.md#deletBugetPlan) | **DELETE** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | delet bugetplan
 *MyApiV1.BugetPlanApi* | [**getBugetPlan**](docs/BugetPlanApi.md#getBugetPlan) | **GET** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan | get buget plan by department
 *MyApiV1.BugetPlanApi* | [**getBugetPlanById**](docs/BugetPlanApi.md#getBugetPlanById) | **GET** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | get buget plan
-*MyApiV1.BugetPlanApi* | [**setMonthBuget**](docs/BugetPlanApi.md#setMonthBuget) | **PUT** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | 
+*MyApiV1.BugetPlanApi* | [**setMonthBuget**](docs/BugetPlanApi.md#setMonthBuget) | **PUT** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId}/SetMonthBuget | 
+*MyApiV1.BugetPlanApi* | [**updateBugetPlan**](docs/BugetPlanApi.md#updateBugetPlan) | **PUT** /api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId} | 
 *MyApiV1.CompanyApi* | [**changeName**](docs/CompanyApi.md#changeName) | **PUT** /api/Company/{id}/{name} | change name company by id
 *MyApiV1.CompanyApi* | [**createCompany**](docs/CompanyApi.md#createCompany) | **POST** /api/Company | create company from object
 *MyApiV1.CompanyApi* | [**deletCompany**](docs/CompanyApi.md#deletCompany) | **DELETE** /api/Company/{id} | Delete company by id

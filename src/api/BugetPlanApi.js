@@ -294,6 +294,63 @@ export default class BugetPlanApi {
       let accepts = ['application/json'];
       let returnType = BugetPlanView;
       return this.apiClient.callApi(
+        '/api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId}/SetMonthBuget', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateBugetPlan operation.
+     * @callback module:api/BugetPlanApi~updateBugetPlanCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/BugetPlanView} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * 
+     * @param {Number} companyId 
+     * @param {Number} departmnetId 
+     * @param {Number} bugetPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BugetPlanView} opts.bugetPlanView 
+     * @param {module:api/BugetPlanApi~updateBugetPlanCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/BugetPlanView}
+     */
+    updateBugetPlan(companyId, departmnetId, bugetPlanId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['bugetPlanView'];
+      // verify the required parameter 'companyId' is set
+      if (companyId === undefined || companyId === null) {
+        throw new Error("Missing the required parameter 'companyId' when calling updateBugetPlan");
+      }
+      // verify the required parameter 'departmnetId' is set
+      if (departmnetId === undefined || departmnetId === null) {
+        throw new Error("Missing the required parameter 'departmnetId' when calling updateBugetPlan");
+      }
+      // verify the required parameter 'bugetPlanId' is set
+      if (bugetPlanId === undefined || bugetPlanId === null) {
+        throw new Error("Missing the required parameter 'bugetPlanId' when calling updateBugetPlan");
+      }
+
+      let pathParams = {
+        'companyId': companyId,
+        'departmnetId': departmnetId,
+        'bugetPlanId': bugetPlanId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json', 'text/json', 'application/*+json'];
+      let accepts = ['application/json'];
+      let returnType = BugetPlanView;
+      return this.apiClient.callApi(
         '/api/Company/{companyId}/Department/{departmnetId}/BugetPlan/{bugetPlanId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
